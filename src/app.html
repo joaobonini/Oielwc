@@ -1,0 +1,33 @@
+<template>
+
+	<lightning-card>
+		<div class="slds-m-around_medium" if:true={visible}>
+			<h1 class="slds-text-heading_large">Hello LWC
+			</h1>
+			<p>
+				AiAiAiUiUiUi, To aprendendo LWC :)
+			</p><br>
+
+
+			<h1 class="slds-text-heading_medium">
+				Dados da Classe:
+			</h1>
+			<p>Nome: {nome}</p>
+			<p>Telefone: {telefone}</p>
+			<p>CPF: {cpf}</p>
+			<p>Idade: {idade}</p>
+		</div>
+		<div class="slds-m-around_medium" if:false={visible}>
+			<h1 class="slds-text-heading_medium">
+				Outras infos:
+			</h1>
+			<p>Email: {email}</p>
+			<p>Instagram: <a href={insta} target="_blank"> Click </a> </p>
+			<p>Linkedin:<a href={linkedin} target="_blank"> CLick </a> </p>
+		</div>
+		<lightning-button variant="brand" label="Outras Infos" title=" Alterar Div" onclick={trocardiv}
+			class="slds-m-left_x-small"></lightning-button>
+		<lightning-button variant="brand" label="Mudar Infos" title=" Alterar Infos" onclick={alterarValor}
+			class="slds-m-left_x-small"></lightning-button>
+	</lightning-card>
+</template>
